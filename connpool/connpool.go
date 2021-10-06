@@ -54,7 +54,8 @@ func (thisObj *connPool) signalHandler() {
 func (thisObj *connPool) pingHandler() {
 	thisObj.pingHandlerOnce.Do(func() {
 		var (
-			timer       *time.Ticker = time.NewTicker(time.Second)
+			recycleTime time.Duration = time.Minute * 15
+			timer       *time.Ticker  = time.NewTicker(recycleTime)
 			removeConns []string
 		)
 

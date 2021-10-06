@@ -1,0 +1,7 @@
+{
+    "UseSSL":false,
+    "CertFile":"ssl cert file path",
+    "KeyFile":"ssl key file path",
+    "ServePort":"the port which you wanna use",
+    "ChannelDir":"path of channel msg buffer"
+}
